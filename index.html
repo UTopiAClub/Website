@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTopiA Club (-∇-)~*</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('bg.png') no-repeat center center fixed;
+            background-size: cover;
+            background-position: center center;
+            color: #333;
+        }
+
+        /* 导航栏样式 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .logo a {
+            text-decoration: none;
+            color: #0071e3;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        /* Menu Button 样式 */
+        .menu-button {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: #0071e3;
+        }
+
+        .menu-button:hover {
+            color: #005bb5;
+        }
+
+        .menu {
+            display: flex;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #0071e3;
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0 15px;
+        }
+
+        .menu a:hover {
+            color: #005bb5;
+        }
+
+        /* 菜单样式 */
+        .menu-items {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 10px;
+            z-index: 1000;
+        }
+
+        .menu-items a {
+            display: block;
+            margin: 10px 0;
+        }
+
+        /* 主体内容样式 */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            padding-top: 80px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h1, h2 {
+            color: #1d1d1f;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 28px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #86868b;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            margin-top: 20px;
+        }
+
+        a.button-link {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #0071e3;
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a.button-link:hover {
+            background-color: #005bb5;
+        }
+
+        @media (max-width: 768px) {
+            .menu-button {
+                display: block;
+            }
+
+            .navbar .menu {
+                display: none;
+            }
+
+            .menu-items {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 导航栏 -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="#">UTopiA Club</a>
+        </div>
+        <button class="menu-button" onclick="toggleMenu()">
+            <span class="material-icons">menu</span>
+        </button>
+        <div class="menu">
+            <a href="#about">关于</a>
+            <a href="#projects">子社团</a>
+            <a href="#contact">联系</a>
+        </div>
+        <div class="menu-items" id="menu-items">
+            <a href="#about">关于</a>
+            <a href="#projects">子社团</a>
+            <a href="#contact">联系</a>
+        </div>
+    </div>
+
+    <!-- 主体内容 -->
+    <div class="container">
+        <!-- About 部分 -->
+        <section id="about">
+            <div class="card">
+                <h1>UTopiA club</h1>
+                <p>一个来自银河系太阳系地球中华人民共和国广东省河源市东源县河源新河实验学校的小社团</p>
+                <p>我想玩blue archive了</p>
+                <div class="button">
+                    <a href="mailto:your-email@example.com" class="button-link">Contact Us</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects 部分 -->
+        <section id="projects">
+            <div class="card">
+                <h2>子社团</h2>
+                <p>下面是一些子社团:</p>
+                <ul>
+                    <li><strong>电子烟交流</strong> 顶针</li>
+                    <li><strong>ccb交流</strong> 电棍</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contact 部分 -->
+        <section id="contact">
+            <div class="card">
+                <h2>联系我们</h2>
+                <p>If you would like to get in touch, feel free to email us at:</p>
+                <p><a href="mailto:example@example.lol">example@example.lol</a></p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menuItems = document.getElementById('menu-items');
+            if (menuItems.style.display === 'block') {
+                menuItems.style.display = 'none';
+            } else {
+                menuItems.style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+</html>
